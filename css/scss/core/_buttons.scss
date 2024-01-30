@@ -1,0 +1,22 @@
+@mixin button {
+  display: flex;
+  padding: 11px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+}
+
+.button-primary {
+  @include button;
+  color: white;
+  background: $primary;
+  border: none;
+}
