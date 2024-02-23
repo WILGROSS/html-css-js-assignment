@@ -1,21 +1,53 @@
 #features {
-  padding: 60px 0;
+  padding: 60px;
 
   .container {
     display: none;
     gap: 10px;
 
     @include md {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
     }
 
-    .image {
-        
+    .content {
+      padding-left: 202px;
+      display: flex;
+      flex-direction: column;
+      column-gap: 100px;
     }
 
-    .box {
-      padding: 40px 0;
+    .icon-holder {
+      background: $gray-200;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    .feature-holder {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .text {
+      max-width: 670px;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      color: $gray-600;
+    //   @include text-lg;
+    }
+
+    .feature-text {
+      max-width: 250px;
+    }
+
+    .feature-box {
+      display: flex;
+      gap: 24px;
+      //   max-width: 900px;
     }
   }
 }
