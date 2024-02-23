@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-$font-manrope: "Manrope", sans-serif;
+$font-manrope: 'Manrope', sans-serif;
 
-@mixin font-navigation {
-  color: $gray-800;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: $font-manrope;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 160%; /* 25.6px */
-}

@@ -1,0 +1,100 @@
+header {
+    padding: 1rem 0;
+
+    .container {
+        display: grid;
+        align-items: center;
+
+        gap: 30px;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:    "logo btn-menu"
+                                "menu menu";
+
+        @include md {
+            grid-template-columns: 1fr auto auto;
+            grid-template-areas:    "logo theme-mode btn-menu";
+        }
+
+        @include lg {
+            grid-template-columns: auto 1fr auto auto;
+            grid-template-areas:    "logo menu theme-mode btn-account";
+        }
+
+        #logo {
+            grid-area: logo;
+        }
+    
+        #menu {
+            grid-area: menu;
+            display: none;
+            gap: 20px;
+            background-color: $gray-900;
+            width: 100%;
+            position: fixed;
+            top:0;
+            left: 0;
+            height: 100vh;
+
+            @include lg {
+                height: 100%;
+                position: static;
+                background-color: $transparent;
+                display: flex !important;
+                align-items: center;
+            }
+
+            .menu-links {
+                display: grid;
+                gap: 20px;
+                padding: 50px 0;
+                text-align: center;
+
+                .nav-link {
+                    color: $gray-100;
+                }
+
+                @include lg {
+                    display: flex;
+                    padding: 0;
+                    text-align: left;
+
+                    .nav-link {
+                        color: $gray-800;
+                    }
+                }
+            }
+        }
+    
+        #theme-mode {
+            grid-area: theme-mode;
+            display: none;
+
+            @include md {
+                display: block;
+            }
+        }
+    
+        #btn-account {
+            grid-area: btn-account;
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+        }
+    
+        #btn-menu {
+            grid-area: btn-menu;
+            display: block;
+            z-index: 0;
+            padding: 18px 22px;
+            font-size: 2em;
+            background: $transparent;
+            border: none;
+
+            @include lg {
+                display: none;
+            }
+        }
+    }
+}

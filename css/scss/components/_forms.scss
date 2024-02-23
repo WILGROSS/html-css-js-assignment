@@ -1,0 +1,43 @@
+form {
+    display: grid;
+    gap: 10px;
+
+
+
+    .input-group {
+
+
+        label {
+            width: 100%;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px !important;
+            border: 1px solid $gray-700;
+        }
+    }
+
+    .checkbox-group {
+        padding: 10px 0 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+
+        input {
+            width: 25px;
+            height: 25px;
+            border-radius: 8px !important;
+            border: 1px solid $gray-700;
+        }
+
+        label {
+            width: 100%;
+        }
+        
+    }
+}
