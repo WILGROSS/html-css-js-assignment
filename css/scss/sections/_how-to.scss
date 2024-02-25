@@ -1,12 +1,12 @@
 #how-to {
-  padding: 60px;
   background: $gray-200;
   .container {
+    padding: 60px 60px 0 60px;
     display: none;
-    flex-direction: column;
-
+    
     @include md {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 45px;
@@ -77,12 +77,16 @@
       color: $gray-700;
       text-align: center;
     }
-
-    .progress-bar{
-        background-color: $danger;
-        img{
-            left:0;
-        }
+  }
+  .progress {
+    background-color: $gray-300;
+    height: 3px;
+    width: 100wv;
+    .bar {
+      width: 508px;
+      // width: calc(100vw / 3);
+      height: 3px;
+      background-color: $primary;
     }
   }
 }
