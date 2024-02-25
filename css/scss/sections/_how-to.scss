@@ -1,0 +1,88 @@
+#how-to {
+  padding: 60px;
+  background: $gray-200;
+  .container {
+    display: none;
+    flex-direction: column;
+
+    @include md {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .selected-phone {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      padding: 0 70px 0 70px;
+    }
+
+    .phone-image {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .phone-screen {
+      position: absolute;
+      top: 15px;
+      left: 87px;
+    }
+
+    .deselected-phone {
+      opacity: 80%;
+    }
+
+    .button {
+      @include shadow-s;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      color: $gray-800;
+      transition: background-color 0.3s ease;
+
+      .button.hover {
+        background-color: darken white, 50%;
+      }
+
+      .button.active {
+        background-color: darken white, 90%;
+      }
+    }
+
+    .heading {
+      color: $gray-900;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $gray-900;
+      gap: 12px;
+    }
+    .text {
+      max-width: 650px;
+      @include text-m;
+      color: $gray-700;
+      text-align: center;
+    }
+
+    .progress-bar{
+        background-color: $danger;
+        img{
+            left:0;
+        }
+    }
+  }
+}
