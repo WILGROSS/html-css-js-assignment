@@ -2,45 +2,71 @@ $transparent: transparent;
 $white: #f2f2f2;
 $dark: #000000;
 
-$gray-100: #F3F6FF;
-$gray-200: #EFF2FC;
-$gray-300: #E2E5F1;
-$gray-400: #D4D7E5;
-$gray-500: #B4B7C9;
-$gray-600: #9397AD;
+$gray-100: #f3f6ff;
+$gray-200: #eff2fc;
+$gray-300: #e2e5f1;
+$gray-400: #d4d7e5;
+$gray-500: #b4b7c9;
+$gray-600: #9397ad;
 $gray-700: #565973;
-$gray-800: #33354D;
-$gray-900: #0B0F19;
+$gray-800: #33354d;
+$gray-900: #0b0f19;
 
-$primary: #6366F1;
+$primary: #6366f1;
 $primary-opacity: #6365f114;
 $secondary: #4647a3;
-$gradient-primary: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
-$gradient-background: linear-gradient(-1deg, rgba(99, 101, 241, 0.10) 0%, rgba(216, 70, 239, 0.05) 45%, rgba(241, 244, 253, 0.07) 75%);
+$gradient-primary: linear-gradient(
+  90deg,
+  #6366f1 0%,
+  #8b5cf6 50%,
+  #d946ef 100%
+);
+$gradient-background: linear-gradient(
+  -1deg,
+  rgba(99, 101, 241, 0.1) 0%,
+  rgba(216, 70, 239, 0.05) 45%,
+  rgba(241, 244, 253, 0.07) 75%
+);
 
-$danger: #EF4444;
-$success: #22C55E;
-$warning: #FFBA08;
-$info: #4C82F7;
-
+$danger: #ef4444;
+$success: #22c55e;
+$warning: #ffba08;
+$info: #4c82f7;
 
 @mixin shadow-s {
-    background: $white !important;
-    box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+  background: $white !important;
+  box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+    0px 4 4px 12px -1px rgba(19, 16, 34, 0.06);
+  -webkit-box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+    0px 4 4px 12px -1px rgba(19, 16, 34, 0.06);
+  -moz-box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
+    0px 4 4px 12px -1px rgba(19, 16, 34, 0.06);
 }
 @mixin shadow-m {
-    fill: $white;
-    filter: drop-shadow(0px 4px 9px rgba(19, 16, 34, 0.03)) drop-shadow(0px 4.4px 20px rgba(19, 16, 34, 0.05));
+  fill: $white;
+  filter: drop-shadow(0px 4px 9px rgba(19, 16, 34, 0.03))
+    drop-shadow(0px 4.4px 20px rgba(19, 16, 34, 0.05));
+  -webkit-box-shadow: 0px 4.4px 20px rgba(19, 16, 34, 0.05);
+  -moz-box-shadow: 0px 4.4px 20px rgba(19, 16, 34, 0.05);
 }
 @mixin shadow-l {
-    background: $white;
-    box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06), 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.10);
+  background: $white;
+  box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06),
+    0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+    -webkit-box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06),
+    0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
+    -moz-box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06),
+    0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.1);
 }
 @mixin shadow-primary {
-    background: $primary;
-    box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.90);
+  background: $primary;
+  box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+  -webkit-box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+  -moz-box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
 }
 @mixin shadow-secondary {
-    background: $gray-200;
-    box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+  background: $gray-200;
+  box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+  -webkit-box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+  -moz-box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
 }

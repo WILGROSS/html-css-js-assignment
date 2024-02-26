@@ -1,9 +1,9 @@
 #how-to {
   background: $gray-200;
   .container {
-    padding: 60px 60px 0 60px;
+    padding: 60px;
     display: none;
-    
+
     @include md {
       display: flex;
       flex-direction: column;

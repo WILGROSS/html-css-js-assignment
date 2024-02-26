@@ -1,0 +1,103 @@
+#features-2 {
+  padding: 60px;
+
+  .container {
+    display: none;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .top {
+      display: flex;
+      gap: 134px;
+      .content {
+        padding-top: 100px;
+        max-width: 416px;
+        .line-holder {
+          display: flex;
+          flex-direction: column;
+          padding: 20px 0;
+          gap: 12px;
+          margin-bottom: 20px;
+          .line {
+            max-height: 40px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            p {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      gap: 24px;
+      .content {
+        padding-top: 60px;
+        max-width: 526px;
+        p {
+          @include text-m;
+          color: $gray-600;
+          margin-bottom: 0;
+        }
+
+        .feature-holder {
+          display: flex;
+          padding: 40px 0;
+          gap: 40px;
+          .feature-box {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 243px;
+            // max-height: 154px;
+
+            .icon-holder {
+              background: $gray-200;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 60px;
+              height: 60px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    .learn-more-btn {
+      display: flex;
+      align-items: center;
+      background-color: $primary;
+      gap: 8px;
+      padding: 11px 28px;
+      border: none;
+      width: 159px;
+      height: 44px;
+      border-radius: 8px;
+      @include text-s;
+      font-weight: 600;
+      color: white;
+
+      cursor: pointer;
+      transition: background-color 0.3s ease, shadow-box;
+
+      &:hover {
+        background-color: darken($primary, 5%);
+        text-decoration: none;
+      }
+
+      &:active {
+        @include shadow-primary;
+        background-color: lighten($primary, 10%);
+      }
+    }
+  }
+}
