@@ -3,6 +3,9 @@
 
   .container {
     display: none;
+    h2 {
+      max-width: 400px;
+    }
 
     @include md {
       display: flex;

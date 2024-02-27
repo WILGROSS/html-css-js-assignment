@@ -1,0 +1,121 @@
+#testimonials {
+  //   background-color: $gradient-background;
+  background-color: $gray-200;
+  position: relative;
+  display: flex;
+
+  .quote-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 100;
+    top: 100;
+    @include shadow-m;
+    background-color: $primary;
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .container {
+    display: none;
+
+    @include md {
+      display: flex;
+      height: 542px;
+      padding-top: 80px;
+      gap: 134px;
+    }
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      max-width: 306px;
+      gap: 50px;
+      .arrow-buttons {
+        display: flex;
+        gap: 20px;
+        .button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: white;
+          @include shadow-s;
+          border: none;
+          border-radius: 50%;
+          width: 36px;
+          height: 36px;
+          cursor: pointer;
+          color: $gray-800;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken(white, 10%);
+          }
+
+          &:active {
+            background-color: darken(white, 25%);
+          }
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+      gap: 24;
+
+      .quote-box {
+        @include shadow-m;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        max-width: 416px;
+        max-height: 329px;
+        padding: 48px 24px 24px;
+        gap: 24px;
+        border-radius: 8px;
+        position: relative;
+
+        .rating-box {
+          display: flex;
+          gap: 2px;
+        }
+
+        .quote {
+          @include text-lg;
+          max-width: 368px;
+          margin-bottom: 0;
+        }
+
+        .user {
+          display: flex;
+          gap: 16px;
+          img {
+            width: 48px;
+            height: 48px;
+          }
+          .user-info {
+            display: flex;
+            // padding-top: 15px;
+            flex-direction: column;
+
+            h6 {
+              color: $gray-900;
+              margin: 0;
+            }
+            p {
+              @include text-s;
+              color: $gray-600;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
