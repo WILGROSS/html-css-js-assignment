@@ -42,43 +42,136 @@
           a {
             color: $primary;
             cursor: pointer;
-            &:hover {
-              text-decoration: underline;
-            }
+            transition: color 0.3s ease;
           }
         }
 
         .call-box {
           a {
             color: $primary;
+
+            &:hover {
+              text-decoration: underline;
+              color: darken($primary, 10%);
+            }
+            &:active {
+              color: $gray-900;
+              color: lighten($primary, 5%);
+            }
           }
         }
         .chat-box {
           a {
             color: $success;
+
+            &:hover {
+              text-decoration: underline;
+              color: darken($success, 10%);
+            }
+            &:active {
+              color: lighten($success, 5%);
+            }
+          }
+        }
+      }
+    }
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .accordion-box {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 746px;
+        border: none;
+        border-radius: 8px;
+        @include shadow-s;
+        padding: 16px 24px;
+        gap: 16px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+
+        .title {
+          cursor: pointer;
+          @include navigation-text;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: background-color 0.5s ease, color 0.5s ease;
+
+          .arrow-button {
+            display: flex;
+            padding: 8px;
+            align-items: flex-start;
+            border-radius: 50%;
+            background-color: $gray-100;
+            // img {
+            //   transform: rotate(180deg);
+            // }
+
+            .inactive {
+              display: flex;
+              margin: 0;
+              width: 20px;
+              height: 20px;
+              align-items: center;
+            }
+
+            .active {
+              display: none;
+            }
           }
         }
 
-        // .chat-box {
-        //   display: flex;
-        //   flex-direction: column;
-        //   gap: 8px;
-        //   width: 196px;
-        //   height: 166px;
-        //   border: $gray-300 solid 1px;
-        //   img {
-        //     max-width: 28px;
-        //     max-height: 28px;
-        //   }
-        //   border-radius: 8px;
-        //   a {
-        //     color: $success;
-        //     cursor: pointer;
-        //     &:hover {
-        //       text-decoration: underline;
-        //     }
-        //   }
-        // }
+        &:hover {
+          background-color: $gray-100;
+
+          .title {
+            @include navigation-hover;
+
+            .arrow-button {
+              background-color: $gray-300;
+              .inactive {
+                background-color: $gray-300;
+              }
+            }
+          }
+        }
+
+        .content {
+          display: none;
+        }
+
+        .toggle:checked + .title + .content {
+          display: block;
+          @include text-s;
+          color: $gray-700;
+        }
+
+        .toggle:checked + .title .arrow-button {
+          background-color: $primary;
+          @include shadow-primary;
+
+          .inactive {
+            display: none;
+          }
+
+          .active {
+            display: flex;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            align-items: center;
+          }
+        }
+
+        &:hover .toggle:checked + .title .arrow-button {
+          background-color: darken($primary, 2.5%);
+          .active {
+            background-color: darken($primary, 2.5%);
+          }
+        }
       }
     }
   }

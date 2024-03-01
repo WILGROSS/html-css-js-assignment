@@ -1,100 +1,113 @@
 @mixin standard-heading {
-    line-height: 130%;
-    font-weight: 800;
-    color: $gray-900;
-    font-family: $font-manrope;
+  line-height: 130%;
+  font-weight: 800;
+  color: $gray-900;
+  font-family: $font-manrope;
 }
 
 @mixin standard-text {
-    line-height: 160%;
-    font-weight: 400;
-    color: $gray-700;
-    font-family: $font-manrope;
+  line-height: 160%;
+  font-weight: 400;
+  color: $gray-700;
+  font-family: $font-manrope;
+}
+
+@mixin navigation-text {
+  @include standard-text;
+  font-size: 16px;
+  font-weight: 600;
+  color: $gray-900;
+}
+
+@mixin navigation-hover {
+  @include standard-text;
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary;
 }
 
 @mixin text-lead {
-    @include standard-text;
-    font-size: 24px;
+  @include standard-text;
+  font-size: 24px;
 }
 @mixin text-xl {
-    @include standard-text;
-    font-size: 20px;
+  @include standard-text;
+  font-size: 20px;
 }
 @mixin text-lg {
-    @include standard-text;
-    font-size: 18px;
+  @include standard-text;
+  font-size: 18px;
 }
 @mixin text-m {
-    @include standard-text;
-    font-size: 16px;
+  @include standard-text;
+  font-size: 16px;
 }
 @mixin text-s {
-    @include standard-text;
-    font-size: 14px;
+  @include standard-text;
+  font-size: 14px;
 }
 @mixin text-xs {
-    @include standard-text;
-    font-size: 12px;
+  @include standard-text;
+  font-size: 12px;
 }
-
 
 // headings
 @mixin h1 {
-    @include standard-heading;
-    font-size: 40px;
+  @include standard-heading;
+  font-size: 40px;
 }
 
 @mixin h2 {
-    @include standard-heading;
-    font-size: 32px;
+  @include standard-heading;
+  font-size: 32px;
 }
 
 @mixin h3 {
-    @include standard-heading;
-    font-size: 28px;
+  @include standard-heading;
+  font-size: 28px;
 }
 
 @mixin h4 {
-    @include standard-heading;
-    font-size: 24px;
+  @include standard-heading;
+  font-size: 24px;
 }
 
 @mixin h5 {
-    @include standard-heading;
-    font-size: 20px;
+  @include standard-heading;
+  font-size: 20px;
 }
 
 @mixin h6 {
-    @include standard-heading;
-    font-size: 16px;
+  @include standard-heading;
+  font-size: 16px;
 }
 
 @mixin d1 {
-    @include standard-heading;
-    font-size: 80px;
+  @include standard-heading;
+  font-size: 80px;
 }
 
 @mixin d2 {
-    @include standard-heading;
-    font-size: 72px;
+  @include standard-heading;
+  font-size: 72px;
 }
 
 @mixin d3 {
-    @include standard-heading;
-    font-size: 64px;
+  @include standard-heading;
+  font-size: 64px;
 }
 
 @mixin d4 {
-    @include standard-heading;
-    font-size: 56px !important;
+  @include standard-heading;
+  font-size: 56px !important;
 }
 
 @mixin d5 {
-    @include standard-heading;
-    font-size: 48px;
+  @include standard-heading;
+  font-size: 48px;
 }
 
 @mixin d6 {
-    @include standard-heading;
-    font-size: 42px;
+  @include standard-heading;
+  font-size: 42px;
 }
