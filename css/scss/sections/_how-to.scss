@@ -45,6 +45,9 @@
     .button {
       @include shadow-s;
       background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border: none;
       border-radius: 50%;
       width: 44px;

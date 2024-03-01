@@ -1,0 +1,85 @@
+#faq {
+  background: white;
+
+  .container {
+    padding: 112px 0 0 0;
+    display: none;
+
+    @include lg {
+      display: flex;
+      gap: 134px;
+    }
+
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      h2 {
+        max-width: 345px;
+      }
+      p {
+        max-width: 370px;
+      }
+
+      .contact-box {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        div {
+          display: flex;
+          flex-direction: column;
+          padding: 24px;
+          gap: 16px;
+          border: $gray-300 solid 1px;
+          border-radius: 8px;
+          p {
+            margin-bottom: 0;
+          }
+          img {
+            max-width: 28px;
+            max-height: 28px;
+          }
+          a {
+            color: $primary;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .call-box {
+          a {
+            color: $primary;
+          }
+        }
+        .chat-box {
+          a {
+            color: $success;
+          }
+        }
+
+        // .chat-box {
+        //   display: flex;
+        //   flex-direction: column;
+        //   gap: 8px;
+        //   width: 196px;
+        //   height: 166px;
+        //   border: $gray-300 solid 1px;
+        //   img {
+        //     max-width: 28px;
+        //     max-height: 28px;
+        //   }
+        //   border-radius: 8px;
+        //   a {
+        //     color: $success;
+        //     cursor: pointer;
+        //     &:hover {
+        //       text-decoration: underline;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}

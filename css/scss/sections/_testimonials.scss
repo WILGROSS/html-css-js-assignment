@@ -1,26 +1,7 @@
 #testimonials {
   //   background-color: $gradient-background;
-  background-color: $gray-200;
-  position: relative;
+  background: $gradient-background;
   display: flex;
-
-  .quote-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 100;
-    top: 100;
-    @include shadow-m;
-    background-color: $primary;
-    border-radius: 6px;
-    width: 44px;
-    height: 44px;
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
 
   .container {
     display: none;
@@ -67,10 +48,10 @@
 
     .right-side {
       display: flex;
-      gap: 24;
+      gap: 24px;
 
       .quote-box {
-        @include shadow-m;
+        @include shadow-s;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -113,6 +94,24 @@
               color: $gray-600;
               margin: 0;
             }
+          }
+        }
+
+        .quote-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          left: 24px;
+          top: -27px;
+          @include shadow-primary;
+          background-color: $primary;
+          border-radius: 6px;
+          width: 44px;
+          height: 44px;
+          img {
+            width: 20px;
+            height: 20px;
           }
         }
       }

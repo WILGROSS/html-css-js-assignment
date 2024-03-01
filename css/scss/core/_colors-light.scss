@@ -1,0 +1,45 @@
+$white: #FFFFFF;
+
+$gray-100: #F3F6FF;
+$gray-200: #EFF2FC;
+$gray-300: #E2E5F1;
+$gray-400: #D4D7E5;
+$gray-500: #B4B7C9;
+$gray-600: #9397AD;
+$gray-700: #565973;
+$gray-800: #33354D;
+$gray-900: #0B0F19;
+
+$primary: #6366F1;
+$gradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+
+$gradient: #EF4444;
+$gradient: #22C55E;
+$gradient: #FFBA08;
+$gradient: #4C82F7;
+
+
+@mixin shadow-s {
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
+}
+@mixin shadow-m {
+    fill: $white;
+    filter: drop-shadow(0px 4px 9px rgba(19, 16, 34, 0.03)) drop-shadow(0px 4.4px 20px rgba(19, 16, 34, 0.05));
+}
+@mixin shadow-l {
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 4px 13px -2px rgba(19, 16, 34, 0.06), 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.10);
+}
+@mixin shadow-primary {
+    border-radius: 8px;
+    background: $primary;
+    box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.90);
+}
+@mixin shadow-secondary {
+    border-radius: 8px;
+    background: $gray-200;
+    box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+}
