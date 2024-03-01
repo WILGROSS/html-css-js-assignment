@@ -36,11 +36,11 @@
           transition: background-color 0.3s ease;
 
           &:hover {
-            background-color: darken(white, 10%);
+            background-color: $gray-300;
           }
 
           &:active {
-            background-color: darken(white, 25%);
+            background-color: $gray-500;
           }
         }
       }
