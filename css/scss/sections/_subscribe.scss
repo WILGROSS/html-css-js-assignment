@@ -1,0 +1,27 @@
+#subscribe {
+  .container {
+    background-color: $gray-100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    gap: 78px;
+    height: 222px;
+
+    .title-bar {
+      display: flex;
+      width: 540px;
+      height: 78px;
+      gap: 32px;
+      img {
+        width: 78px;
+        height: 78px;
+      }
+    }
+
+    img {
+      width: 472px;
+      height: 52px;
+    }
+  }
+}

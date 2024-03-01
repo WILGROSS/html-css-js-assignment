@@ -2,12 +2,12 @@
   background: white;
 
   .container {
-    padding: 112px 0 0 0;
     display: none;
 
     @include lg {
       display: flex;
       gap: 134px;
+      padding: 112px 0 80px 0;
     }
 
     .left-side {
