@@ -99,7 +99,7 @@
 
       &:active {
         @include shadow-primary;
-        background-color: lighten($primary, 10%);
+        background-color: lighten($primary, 5%);
       }
     }
   }

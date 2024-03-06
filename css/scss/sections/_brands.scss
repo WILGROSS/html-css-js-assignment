@@ -1,18 +1,30 @@
 #brands {
-    padding: 60px 0;
+  padding: 60px 0;
 
-    .container {
-        display: none;
-        gap: 10px;
-        
-        @include md {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
+  .container {
+    display: none;
+    gap: 10px;
 
-
-        .box {
-            padding: 40px 0;
-        }
+    @include md {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .brand-box {
+      padding: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $gray-300;
+      border-radius: 8px;
+
+      &:hover {
+        @include shadow-s;
+        cursor: pointer;
+      }
+      &:active {
+        background-color: $gray-100;
+      }
+    }
+  }
 }

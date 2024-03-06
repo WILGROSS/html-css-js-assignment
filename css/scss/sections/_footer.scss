@@ -54,7 +54,7 @@ footer {
         &:hover{
             background-color: $gray-300;
         }
-        &:hover{
+        &:active{
             background-color: $gray-400;
             @include shadow-s;
         }
