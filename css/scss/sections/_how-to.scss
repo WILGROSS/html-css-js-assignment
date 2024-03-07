@@ -86,9 +86,10 @@
     background-color: $gray-300;
     height: 3px;
     width: 100wv;
+    display: flex;
+    justify-content: center;
     .bar {
-      width: 508px;
-      // width: calc(100vw / 3);
+      width: calc(100vw / 3);
       height: 3px;
       background-color: $primary;
     }
