@@ -1,0 +1,111 @@
+#contact-us {
+  background-color: $gray-100;
+  .container {
+    .full-section {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 0;
+      gap: 10px;
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: $gray-600;
+
+          transition: color 0.3s ease;
+
+          &:active {
+            color: $gray-700;
+            text-decoration: none;
+          }
+
+          &:last-child {
+            color: $primary;
+            &:active {
+              color: darken($primary, 7%);
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .quick-contact {
+        padding: 20px 0 40px;
+
+        .contact-box {
+          display: flex;
+          gap: 32px;
+          padding: 30px 0;
+
+          .icon-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            img {
+              width: 28px;
+              height: 28px;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 306px;
+
+            h4 {
+              margin-bottom: 0;
+            }
+
+            a {
+              display: block;
+              width: 183px;
+              padding-top: 13px;
+              gap: 8px;
+              @include navigation-hover;
+              transition: color 0.3s ease;
+
+              &:active {
+                color: darken($primary, 10%);
+                text-decoration: none;
+              }
+
+              img {
+                width: 13.41px;
+                height: 13.41px;
+                margin-left: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .consultation {
+      position: relative;
+      left: 660px;
+      top: 94px;
+      width: 636px;
+      height: 718px;
+      border-radius: 8px;
+      display: flex;
+      padding: 72px;
+      @include shadow-l;
+      background-color: white;
+    }
+  }
+}

@@ -1,10 +1,15 @@
-@import './sections/header';
-@import './sections/showcase';
-@import './sections/brands';
-@import './sections/features';
-@import './sections/how-to';
-@import './sections/features-2';
-@import './sections/testimonials';
-@import './sections/faq';
-@import './sections/subscribe';
-@import './sections/footer';
+// Home
+@import "./sections/home/header";
+@import "./sections/home/showcase";
+@import "./sections/home/brands";
+@import "./sections/home/features";
+@import "./sections/home/how-to";
+@import "./sections/home/features-2";
+@import "./sections/home/testimonials";
+@import "./sections/home/faq";
+@import "./sections/home/subscribe";
+@import "./sections/home/footer";
+
+// Contact
+@import "./sections/contact/header";
+@import "./sections/contact/contact-us";
