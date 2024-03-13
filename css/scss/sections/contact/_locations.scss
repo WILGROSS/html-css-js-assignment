@@ -1,0 +1,75 @@
+#locations {
+  .container {
+    display: flex;
+    padding: 207px 0 112px;
+    gap: 134px;
+    img {
+      width: 636px;
+      height: 540px;
+    }
+
+    .locations-holder {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      .location {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .content {
+          display: flex;
+          gap: 8px;
+          @include text-m;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+          }
+
+          .business-hours {
+            div {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              h6 {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .social-media {
+      display: flex;
+      padding-top: 40px;
+      gap: 16px;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray-200;
+        width: 44px;
+        height: 44px;
+        border-radius: 6px;
+        transition: background-color 0.2s ease, shadow-box 0.2s ease;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          @include shadow-s;
+          background-color: $gray-400;
+        }
+        &:active {
+          @include shadow-m;
+          background-color: $gray-300;
+        }
+      }
+    }
+  }
+}
