@@ -2,10 +2,75 @@
   background-color: $gray-900;
   .container {
     display: flex;
-    
-    .content{
+    gap: 244px;
+    padding: 72px 0 64px;
+
+    .content {
       display: flex;
-      
+      flex-direction: column;
+      max-width: 416px;
+
+      .logo {
+        padding-bottom: 40px;
+      }
+
+      @include text-s;
+      color: $gray-500;
+
+      .newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 40px 0 72px;
+        @include navigation-text;
+        color: white;
+      }
+
+      .legal {
+        @include text-xs;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 71px;
+
+      .link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 150px;
+        a {
+          @include navigation-text;
+          color: white;
+          transition: color 0.3s ease;
+
+          &:active {
+            text-decoration: none;
+            color: $gray-200;
+          }
+        }
+        .news {
+          padding-bottom: 40px;
+        }
+      }
+
+      .contact-us {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include navigation-text;
+        color: white;
+        a {
+          @include navigation-hover;
+          transition: color 0.3s ease;
+
+          &:active {
+            text-decoration: none;
+            color: $gray-200;
+          }
+        }
+      }
     }
   }
 }
