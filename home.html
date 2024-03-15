@@ -648,10 +648,23 @@
                 updates
               </h4>
             </div>
-            <img
-              src="images/icons/email-field-placeholder.svg"
-              alt="email-field-placeholder"
-            />
+            <div class="newsletter">
+              <form
+                novalidate="true"
+                action=""
+                onsubmit="newsletterFormHandler(event)"
+              >
+                <div class="newsletter-box">
+                  <label for="newsletter-email-field">Subscribe to our newsletter</label>
+                  <div class="input-wrapper">
+                    <input name="email" type="text" id="newsletter-email-field" placeholder="Your email" />
+                    <img src="images/icons/icon_envelope_gray-600.svg" alt="Envelope" class="envelope-icon">
+                  </div>
+                  <div class="info-label" id="newsletter-email-info"></div>
+                </div>
+                <button>Subscribe</button>
+              </form>
+            </div>    
           </div>
         </section>
       </main>

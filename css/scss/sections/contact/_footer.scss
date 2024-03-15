@@ -79,9 +79,23 @@
           .envelope-icon {
             position: absolute;
             left: 16px;
-            height: 20px;
-            width: auto;
           }
+        }
+
+        .info-label {
+          @include text-xs;
+          border-radius: 4px;
+          width: fit-content;
+          padding: 5px;
+          display: inline-block;
+        }
+        .info-label.error {
+          background-color: $danger;
+          color: lighten($danger, 30%);
+        }
+        .info-label.success {
+          background-color: $success;
+          color: lighten($success, 60%);
         }
       }
 
