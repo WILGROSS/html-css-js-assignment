@@ -34,7 +34,6 @@ $warning: #ffba08;
 $info: #4c82f7;
 
 @mixin shadow-s {
-  // background: $white !important;
   box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),
     0px 4.4px 12px -1px rgba(19, 16, 34, 0.06);
   -webkit-box-shadow: 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03),

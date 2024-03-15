@@ -1,4 +1,3 @@
-// Consultation form
 function contactFormHandler(event){
     event.preventDefault();
     checkErrors(event);
@@ -116,7 +115,6 @@ fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists')
     });
   }
 
-  //Footer newsletter form
   function newsletterFormHandler(event){
     event.preventDefault();
     checkEmailErrors(event.target);
@@ -134,10 +132,8 @@ fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists')
       emailLabel.classList.remove('success');
       emailLabel.classList.add('error');
     } else {
-      // Correctly formatted URL with email as a query parameter
       const apiUrl = `https://kyhnet23-assignment.azurewebsites.net/api/subscribe?email=${encodeURIComponent(data.email)}`;
   
-      // Keep the method and headers as they were, only the URL changes
       fetch(apiUrl, {
         method: 'POST',
         headers: {
