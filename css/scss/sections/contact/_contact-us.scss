@@ -108,11 +108,7 @@
       gap: 40px;
       @include shadow-l;
       background-color: white;
-
-      .input-group {
-        // padding-bottom: 14px;
-      }
-
+      
       .date-time {
         display: flex;
         gap: 24px;

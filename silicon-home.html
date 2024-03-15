@@ -17,13 +17,15 @@
     ></script>
     <script src="/js/script.js"></script>
     <link href="css/layout.min.css" rel="stylesheet" />
-    <title></title>
+    <title>Silicon</title>
+    <meta name="author" content="William Gross" />
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   </head>
   <body>
     <div class="wrapper">
       <header id="home-header">
         <div class="container">
-          <a id="logo" href="home.html"
+          <a id="logo" href="silicon-home.html"
             ><img
               src="images/logo/silicon-logo-light_theme.svg"
               alt="silicon logotype"
@@ -34,7 +36,7 @@
               <a class="nav-link" href="#showcase">Overview</a>
               <a class="nav-link" href="#features">Features</a>
               <a class="nav-link" href="#">News</a>
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="silicon-contact.html">Contact</a>
             </div>
           </nav>
 
@@ -414,7 +416,7 @@
                 <div class="call-box">
                   <img src="images/icons/call.svg" alt="Call us" />
                   <p>Still have questions?</p>
-                  <a href="contact.html">
+                  <a href="silicon-contact.html">
                     contact us
                     <img
                       src="images/icons/primary_arrow.svg"
@@ -425,7 +427,7 @@
                 <div class="chat-box">
                   <img src="images/icons/chat.svg" alt="chat with us" />
                   <p>Don't like phone calls?</p>
-                  <a href="contact.html">
+                  <a href="silicon-contact.html">
                     Contact us
                     <img src="images/icons/green_arrow.svg" alt="chat button" />
                   </a>
@@ -655,22 +657,30 @@
                 onsubmit="newsletterFormHandler(event)"
               >
                 <div class="newsletter-box">
-                  <label for="newsletter-email-field">Subscribe to our newsletter</label>
                   <div class="input-wrapper">
-                    <input name="email" type="text" id="newsletter-email-field" placeholder="Your email" />
-                    <img src="images/icons/icon_envelope_gray-600.svg" alt="Envelope" class="envelope-icon">
+                    <input
+                      name="email"
+                      type="text"
+                      id="newsletter-email-field"
+                      placeholder="Your Email"
+                    />
+                    <img
+                      src="images/icons/icon_envelope_gray-500.svg"
+                      alt="Envelope"
+                      class="envelope-icon"
+                    />
                   </div>
                   <div class="info-label" id="newsletter-email-info"></div>
                 </div>
                 <button>Subscribe</button>
               </form>
-            </div>    
+            </div>
           </div>
         </section>
       </main>
       <footer id="home-footer">
         <div class="container">
-          <a class="logo" href="home.html"
+          <a class="logo" href="silicon-home.html"
             ><img
               src="images/logo/silicon-logo-light_theme.svg"
               alt="silicon logotype"
@@ -679,7 +689,7 @@
             <a class="nav-link" href="#showcase">Overview</a>
             <a class="nav-link" href="#features">Features</a>
             <a class="nav-link" href="#">News</a>
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="silicon-contact.html">Contact</a>
             <a class="nav-link" href="#">Account</a>
           </div>
           <div class="download-app">
@@ -719,28 +729,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      const toggleMenu = () => {
-        const element = document.getElementById("menu");
-        if (element.style.display === "none") {
-          element.style.display = "block";
-          element.style.color = "#ffffff";
-        } else {
-          element.style.display = "none";
-        }
-      };
-
-      document
-        .getElementById("theme-toggle-switch")
-        .addEventListener("change", function (event) {
-          if (event.target.checked) {
-            document.body.classList.add("dark-mode");
-            document.body.classList.remove("light-mode");
-          } else {
-            document.body.classList.add("light-mode");
-            document.body.classList.remove("dark-mode");
-          }
-        });
-    </script>
   </body>
 </html>

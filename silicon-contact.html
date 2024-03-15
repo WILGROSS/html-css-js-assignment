@@ -17,13 +17,15 @@
     ></script>
     <script src="/js/script.js"></script>
     <link href="css/layout.min.css" rel="stylesheet" />
-    <title></title>
+    <title>Silicon</title>
+    <meta name="author" content="William Gross">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
   </head>
   <body>
     <div class="wrapper">
       <header id="contact-header">
         <div class="container">
-          <a id="logo" href="home.html"
+          <a id="logo" href="silicon-home.html"
             ><img
               src="images/logo/silicon-logo-light_theme.svg"
               alt="silicon logotype"
@@ -31,10 +33,10 @@
 
           <nav id="menu">
             <div class="menu-links">
-              <a class="nav-link" href="#showcase">Overview</a>
-              <a class="nav-link" href="#features">Features</a>
-              <a class="nav-link" href="news.html">News</a>
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="silicon-home.html#showcase">Overview</a>
+              <a class="nav-link" href="silicon-home.html#features">Features</a>
+              <a class="nav-link" href="silicon-home.html#">News</a>
+              <a class="nav-link" href="silicon-contact.html">Contact</a>
             </div>
           </nav>
 
@@ -65,7 +67,7 @@
           <div class="container">
             <div class="full-section">
               <div class="breadcrumb">
-                <a class="inactive" href="home.html">
+                <a class="inactive" href="silicon-home.html">
                   <img src="images/icons/home-icon.svg" alt="home" />
                   Home
                 </a>
@@ -73,7 +75,7 @@
                   src="images/icons/chevron-right-double.svg"
                   alt="double chevron"
                 />
-                <a href="contact.html"> Contact </a>
+                <a href="silicon-contact.html"> Contact </a>
               </div>
               <h1>Contact Us</h1>
               <div class="quick-contact">
@@ -264,7 +266,7 @@
       <footer id="contact-footer">
         <div class="container">
           <div class="content">
-            <a class="logo" href="home.html"
+            <a class="logo" href="silicon-home.html"
               ><img
                 src="images/logo/silicon-logo-dark_theme.svg"
                 alt="silicon logotype"
@@ -281,26 +283,37 @@
                 onsubmit="newsletterFormHandler(event)"
               >
                 <div class="newsletter-box">
-                  <label for="newsletter-email-field">Subscribe to our newsletter</label>
+                  <label for="newsletter-email-field"
+                    >Subscribe to our newsletter</label
+                  >
                   <div class="input-wrapper">
-                    <input name="email" type="text" id="newsletter-email-field" placeholder="Your email" />
-                    <img src="images/icons/icon_envelope_gray-600.svg" alt="Envelope" class="envelope-icon">
+                    <input
+                      name="email"
+                      type="text"
+                      id="newsletter-email-field"
+                      placeholder="Your Email"
+                    />
+                    <img
+                      src="images/icons/icon_envelope_gray-600.svg"
+                      alt="Envelope"
+                      class="envelope-icon"
+                    />
                   </div>
                   <div class="info-label" id="newsletter-email-info"></div>
                 </div>
                 <button>Subscribe</button>
               </form>
-            </div>            
+            </div>
 
             <div class="legal">2024. All rights reserved. Silicon Template</div>
           </div>
 
           <div class="links">
             <div class="link-box">
-              <a href="home.html">Home</a>
-              <a href="home.html#features">Services</a>
-              <a href="home.html#brands">Our Clients</a>
-              <a href="home.html#testimonials">Testimonials</a>
+              <a href="silicon-home.html">Home</a>
+              <a href="silicon-home.html#features">Services</a>
+              <a href="silicon-home.html#brands">Our Clients</a>
+              <a href="silicon-home.html#testimonials">Testimonials</a>
               <a class="news" href="#">News</a>
               <a href="#">Terms & Conditions</a>
               <a href="#">Privacy Policy</a>
@@ -321,28 +334,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      const toggleMenu = () => {
-        const element = document.getElementById("menu");
-        if (element.style.display === "none") {
-          element.style.display = "block";
-          element.style.color = "#ffffff";
-        } else {
-          element.style.display = "none";
-        }
-      };
-
-      document
-        .getElementById("theme-toggle-switch")
-        .addEventListener("change", function (event) {
-          if (event.target.checked) {
-            document.body.classList.add("dark-mode");
-            document.body.classList.remove("light-mode");
-          } else {
-            document.body.classList.add("light-mode");
-            document.body.classList.remove("dark-mode");
-          }
-        });
-    </script>
   </body>
 </html>
