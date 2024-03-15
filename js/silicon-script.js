@@ -76,6 +76,7 @@ function checkErrors(event){
             date: data.date,
             time: data.time
         };
+          const selectedSpecialistText = specialistSelect.options[specialistSelect. selectedIndex].text;
 
         fetch('https://kyhnet23-assignment.azurewebsites.net/api/book-appointment', {
             method: 'POST',
@@ -86,7 +87,8 @@ function checkErrors(event){
         })
         .then(response => {
             if(response.status === 200) {
-                alert(`Successfully booked appointment for ${data.fullName} on ${data.date} at ${data.time}! We've sent a confirmation to your e-mail.`);
+                alert(`Successfully booked appointment for ${data.fullName} with ${selectedSpecialistText} on ${data.date} at ${data.time}!
+                We've sent a  confirmation to ${data.email}.`);
                 dateTimeLabel.classList.remove('error')
                 dateTimeLabel.classList.remove('success')
                 dateTimeLabel.innerHTML = ''
