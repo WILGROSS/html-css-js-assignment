@@ -87,6 +87,20 @@ function checkErrors(event){
         .then(response => {
             if(response.status === 200) {
                 alert(`Successfully booked appointment for ${data.fullName} on ${data.date} at ${data.time}! We've sent a confirmation to your e-mail.`);
+                dateTimeLabel.classList.remove('error')
+                dateTimeLabel.classList.remove('success')
+                dateTimeLabel.innerHTML = ''
+                specialistLabel.classList.remove('error')
+                specialistLabel.classList.remove('success')
+                specialistLabel.innerHTML = ''
+                emailLabel.classList.remove('error')
+                emailLabel.classList.remove('success')
+                emailLabel.innerHTML = ''
+                fullNameLabel.classList.remove('error')
+                fullNameLabel.classList.remove('success')
+                fullNameLabel.innerHTML = ''
+                event.target.reset();
+
             } else {
                 console.error('Failed to book appointment:', response.status);
             }
@@ -145,6 +159,7 @@ fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists')
           emailLabel.innerHTML = 'Thank you for subscribing to our newsletter!';
           emailLabel.classList.remove('error');
           emailLabel.classList.add('success');
+          form.reset();
         } else {
           emailLabel.innerHTML = 'There was an error subscribing. Please try again.';
           emailLabel.classList.remove('success');
