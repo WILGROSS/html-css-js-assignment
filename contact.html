@@ -135,34 +135,33 @@
                   <label for="specialist-field">Specialist</label>
                   <select name="specialist" id="specialist-field">
                     <option value="" selected disabled></option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <!-- Add more options here -->
+                    <!-- Options will be populated here by the JavaScript -->
                   </select>
                   <div class="info-label" id="specialist-info"></div>
                 </div>
 
-                <div class="date-time">
-                  <div class="input-group">
-                    <label for="#date-field">Date</label>
-                    <input
-                      name="date"
-                      id="date-field"
-                      type="date"
-                      id="date-field"
-                    />
-                    <div class="info-label" id="date-info"></div>
+                <div class="date-time-holder">
+                  <div class="date-time">
+                    <div class="input-group">
+                      <label for="#date-field">Date</label>
+                      <input
+                        name="date"
+                        id="date-field"
+                        type="date"
+                        id="date-field"
+                      />
+                    </div>
+                    <div class="input-group">
+                      <label for="#date-field">Time</label>
+                      <input
+                        name="time"
+                        required="true"
+                        type="time"
+                        id="time-field"
+                      />
+                    </div>
                   </div>
-                  <div class="input-group">
-                    <label for="#date-field">Time</label>
-                    <input
-                      name="time"
-                      required="true"
-                      type="time"
-                      id="time-field"
-                    />
-                    <div class="info-label" id="date-info"></div>
-                  </div>
+                  <div class="info-label" id="date-time-info"></div>
                 </div>
                 <button type="submit">Make an appointment</button>
               </form>
@@ -276,12 +275,22 @@
             dolor ullamcorper sodales ultrices eros.
 
             <div class="newsletter">
-              Subscribe to our newsletter
-              <img
-                src="images/icons/newsletter-placeholder-dark.svg"
-                alt="newsletter placeholder"
-              />
-            </div>
+              <form
+                novalidate="true"
+                action=""
+                onsubmit="contactFormHandler(event)"
+              >
+                <div class="newsletter-box">
+                  <label for="newsletter-email-field">Subscribe to our newsletter</label>
+                  <div class="input-wrapper">
+                    <input name="email" type="text" id="newsletter-email-field" placeholder="Your email" />
+                    <img src="images/icons/icon_envelope_gray-600.svg" alt="Envelope" class="envelope-icon">
+                  </div>
+                  <div class="info-label" id="newsletter-email-info"></div>
+                </div>
+                <button>Subscribe</button>
+              </form>
+            </div>            
 
             <div class="legal">2024. All rights reserved. Silicon Template</div>
           </div>
@@ -306,7 +315,7 @@
             </div>
             <div class="contact-us">
               Contact us
-              <a href="#">example@gmail.com</a>
+              <a href="#">contact@silicon.com</a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
+// Consultation form
 function contactFormHandler(event){
-    // alert(12122);
     event.preventDefault();
     checkErrors(event);
 }
@@ -7,16 +7,23 @@ function contactFormHandler(event){
 function checkErrors(event){
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
-    const nameTooShort = data.fullName.length < 2;
-    const emailTooShort = data.email.length < 5;
-    const invalidDate = data.date.length < 5;
-    const invalidTime = data.time.length < 5;
+
+    const nameTooShort = !/^[A-Za-zÅÄÖåäö]{2,}\s[A-Za-zÅÄÖåäö]{2,}$/.test(data.fullName);
+
+    const invalidEmail = !/^[A-Za-zÅÄÖåäö0-9._%+-]+@[A-Za-zÅÄÖåäö0-9.-]+\.[A-Za-zÅÄÖåäö]{2,}(?:\.[A-Za-zÅÄÖåäö]{2,})?$/.test(data.email);
+
+    const isValidDate = data.date && data.time;
+    const selectedDateTime = isValidDate ? new Date(`${data.date}T${data.time}`) : null;
+    const currentTimePlusOneHour = new Date(new Date().getTime() + (60 * 60 * 1000));
+    const invalidDateTime = !selectedDateTime || selectedDateTime <= currentTimePlusOneHour;
+
+    const specialistSelect = document.querySelector('#specialist-field');
+    const invalidSpecialist = !specialistSelect.value || specialistSelect.value === "";
 
     const fullNameLabel = document.querySelector('#full-name-info')
     const emailLabel = document.querySelector('#email-info')
     const specialistLabel = document.querySelector('#specialist-info')
-    const dateLabel = document.querySelector('#date-info')
-    const timeLabel = document.querySelector('#time-info')
+    const dateTimeLabel = document.querySelector('#date-time-info')
     
     if (nameTooShort){
       fullNameLabel.innerHTML = 'Please enter your first and last name.'
@@ -29,7 +36,7 @@ function checkErrors(event){
         fullNameLabel.classList.add('success');
     }
  
-    if (emailTooShort){
+    if (invalidEmail){
         emailLabel.innerHTML = 'Please enter your e-mail address.'
         emailLabel.classList.remove('success')
         emailLabel.classList.add('error');
@@ -39,44 +46,72 @@ function checkErrors(event){
         emailLabel.classList.remove('error')
         emailLabel.classList.add('success');
     }
-
-    if (invalidDate){
-        dateLabel.innerHTML = 'Please enter a valid date.'
-        dateLabel.classList.remove('success')
-        dateLabel.classList.add('error');
+    
+    if (invalidSpecialist){
+        specialistLabel.innerHTML = 'Please select a specialist.'
+        specialistLabel.classList.remove('success')
+        specialistLabel.classList.add('error');
     }
     else{
-        dateLabel.innerHTML = 'Looks good!'
-        dateLabel.classList.remove('error')
-        dateLabel.classList.add('success');
+        specialistLabel.innerHTML = 'Looks good!'
+        specialistLabel.classList.remove('error')
+        specialistLabel.classList.add('success');
     }
 
-    if (invalidTime){
-        timeLabel.innerHTML = 'Please enter a valid time.'
-        timeLabel.classList.remove('success')
-        timeLabel.classList.add('error');
+    if (invalidDateTime){
+        dateTimeLabel.innerHTML = 'Please enter a valid date and time.'
+        dateTimeLabel.classList.remove('success')
+        dateTimeLabel.classList.add('error');
     }
     else{
-        timeLabel.innerHTML = 'Looks good!'
-        timeLabel.classList.remove('error')
-        timeLabel.classList.add('success');
+        dateTimeLabel.innerHTML = 'Looks good!'
+        dateTimeLabel.classList.remove('error')
+        dateTimeLabel.classList.add('success');
     }
 
-    console.log(data);
+    if (!nameTooShort && !invalidEmail && !invalidDateTime && !invalidSpecialist) {
+        const appointmentData = {
+            fullName: data.fullName,
+            email: data.email,
+            specialist: specialistSelect.value,
+            date: data.date,
+            time: data.time
+        };
+
+        fetch('https://kyhnet23-assignment.azurewebsites.net/api/book-appointment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(appointmentData)
+        })
+        .then(response => {
+            if(response.status === 200) {
+                alert(`Successfully booked appointment for ${data.fullName} on ${data.date} at ${data.time}! We've sent a confirmation to your e-mail.`);
+            } else {
+                console.error('Failed to book appointment:', response.status);
+            }
+        })
+        .catch(error => {
+            console.error('Error booking appointment:', error);
+        });
+    }
 }
 
-function populateSpecialists(specialists) {
+fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    populateSpecialists(data);
+  })
+  .catch(error => console.error('Error fetching specialists:', error));
+
+  function populateSpecialists(specialists) {
     const select = document.getElementById('specialist-field');
     specialists.forEach(specialist => {
       const option = document.createElement('option');
       option.value = specialist.id;
-      option.textContent = `${specialist.firstname} ${specialist.lastname}`;
+      option.textContent = `${specialist.firstName} ${specialist.lastName}`;
       select.appendChild(option);
     });
   }
-  
-  fetch('https://your-api-url/api/specialists')
-    .then(response => response.json())
-    .then(data => populateSpecialists(data))
-    .catch(error => console.error('Error fetching specialists:', error));
-  

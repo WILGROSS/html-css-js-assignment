@@ -18,12 +18,71 @@
       color: $gray-500;
 
       .newsletter {
+        position: relative;
         display: flex;
         flex-direction: column;
-        gap: 8px;
         padding: 40px 0 72px;
         @include navigation-text;
         color: white;
+
+        button {
+          position: absolute;
+          top: 74px;
+          right: 0;
+          width: 124px;
+          height: 44px;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          border: none;
+          @include navigation-text;
+          background-color: $primary;
+          color: white;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken($primary, 4%);
+          }
+          &:active {
+            background-color: darken($primary, 8%);
+          }
+        }
+
+        .newsletter-box {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .input-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          input {
+            all: unset;
+            height: 44px;
+            width: 100%;
+            padding: 0 16px 0 48px;
+            border: 1px $gray-700 solid;
+            border-radius: 6px;
+            @include text-s;
+            color: $gray-600;
+            background-color: lighten($gray-900, 2%);
+          }
+
+          input:focus {
+            @include shadow-primary;
+            border: 1px lighten($primary, 10%) solid;
+            background-color: lighten($gray-900, 1%);
+          }
+
+          .envelope-icon {
+            position: absolute;
+            left: 16px;
+            height: 20px;
+            width: auto;
+          }
+        }
       }
 
       .legal {
