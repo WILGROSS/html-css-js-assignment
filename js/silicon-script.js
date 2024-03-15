@@ -25,7 +25,7 @@ function checkErrors(event){
     const dateTimeLabel = document.querySelector('#date-time-info')
     
     if (nameTooShort){
-      fullNameLabel.innerHTML = 'Please enter your first and last name.'
+      fullNameLabel.innerHTML = '* Please enter your first and last name.'
       fullNameLabel.classList.remove('success')
       fullNameLabel.classList.add('error');
     }
@@ -36,7 +36,7 @@ function checkErrors(event){
     }
  
     if (invalidEmail){
-        emailLabel.innerHTML = 'Please enter your e-mail address.'
+        emailLabel.innerHTML = '* Please enter your e-mail address.'
         emailLabel.classList.remove('success')
         emailLabel.classList.add('error');
     }
@@ -47,7 +47,7 @@ function checkErrors(event){
     }
     
     if (invalidSpecialist){
-        specialistLabel.innerHTML = 'Please select a specialist.'
+        specialistLabel.innerHTML = '* Please select a specialist.'
         specialistLabel.classList.remove('success')
         specialistLabel.classList.add('error');
     }
@@ -58,7 +58,7 @@ function checkErrors(event){
     }
 
     if (invalidDateTime){
-        dateTimeLabel.innerHTML = 'Please enter a valid date and time.'
+        dateTimeLabel.innerHTML = '* Please enter a valid date and time.'
         dateTimeLabel.classList.remove('success')
         dateTimeLabel.classList.add('error');
     }
@@ -128,7 +128,7 @@ fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists')
     const invalidEmail = !/^[A-Za-zÅÄÖåäö0-9._%+-]+@[A-Za-zÅÄÖåäö0-9.-]+\.[A-Za-zÅÄÖåäö]{2,}(?:\.[A-Za-zÅÄÖåäö]{2,})?$/.test(data.email);
   
     if (invalidEmail) {
-      emailLabel.innerHTML = 'Please enter a valid e-mail address.';
+      emailLabel.innerHTML = '* Please enter a valid e-mail address.';
       emailLabel.classList.remove('success');
       emailLabel.classList.add('error');
     } else {
