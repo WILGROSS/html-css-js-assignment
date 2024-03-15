@@ -103,9 +103,78 @@
       height: 718px;
       border-radius: 8px;
       display: flex;
+      flex-direction: column;
       padding: 72px;
+      gap: 40px;
       @include shadow-l;
       background-color: white;
+
+      .input-group {
+        // padding-bottom: 14px;
+      }
+
+      .date-time {
+        display: flex;
+        gap: 24px;
+      }
+      input {
+        all: unset;
+        display: block;
+        height: 52px;
+        width: 100%;
+        margin-bottom: 5px;
+        padding-left: 16px;
+        border: 1px $gray-400 solid;
+        border-radius: 6px;
+      }
+      input:focus {
+        @include shadow-s;
+        background-color: white;
+        border: 1px lighten($primary, 20%) solid;
+      }
+
+      select{
+        // all: unset;
+        display: block;
+        height: 52px;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 16px;
+        border: 1px $gray-400 solid;
+        border-radius: 6px;
+      }
+      select:focus {
+        @include shadow-s;
+        background-color: white;
+        border: 1px lighten($primary, 20%) solid;
+      }
+
+      .info-label {
+        @include text-xs;
+        border-radius: 4px;
+        padding: 5px;
+        display: inline-block;
+      }
+      .info-label.error {
+        color: $danger;
+        background-color: lighten($danger, 30%);
+      }
+      .info-label.success {
+        color: $success;
+        background-color: lighten($success, 40%);
+      }
+
+      button{
+        width: 229px;
+        height: 52px;
+        border: none;
+        border-radius: 8px;
+        @include shadow-primary;
+        color: white;
+        background-color: $primary;
+
+        margin-top: 30px;
+      }
     }
   }
 }

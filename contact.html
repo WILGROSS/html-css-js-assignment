@@ -15,6 +15,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/script.js"></script>
     <link href="css/layout.min.css" rel="stylesheet" />
     <title></title>
   </head>
@@ -114,6 +115,57 @@
             </div>
             <div class="consultation">
               <h2>Get Online consultation</h2>
+              <form
+                novalidate="true"
+                action=""
+                onsubmit="contactFormHandler(event)"
+              >
+                <div class="input-group">
+                  <label for="#name-field">Full Name</label>
+                  <input name="fullName" type="text" id="name-field" />
+                  <div class="info-label" id="full-name-info"></div>
+                </div>
+                <div class="input-group">
+                  <label for="#email-field">Email Address</label>
+                  <input name="email" type="text" id="email-field" />
+                  <div class="info-label" id="email-info"></div>
+                </div>
+
+                <div class="input-group">
+                  <label for="specialist-field">Specialist</label>
+                  <select name="specialist" id="specialist-field">
+                    <option value="" selected disabled></option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <!-- Add more options here -->
+                  </select>
+                  <div class="info-label" id="specialist-info"></div>
+                </div>
+
+                <div class="date-time">
+                  <div class="input-group">
+                    <label for="#date-field">Date</label>
+                    <input
+                      name="date"
+                      id="date-field"
+                      type="date"
+                      id="date-field"
+                    />
+                    <div class="info-label" id="date-info"></div>
+                  </div>
+                  <div class="input-group">
+                    <label for="#date-field">Time</label>
+                    <input
+                      name="time"
+                      required="true"
+                      type="time"
+                      id="time-field"
+                    />
+                    <div class="info-label" id="date-info"></div>
+                  </div>
+                </div>
+                <button type="submit">Make an appointment</button>
+              </form>
             </div>
           </div>
         </section>
@@ -121,7 +173,16 @@
         <!-- Locations -->
         <section id="locations">
           <div class="container">
-            <img src="images/location-map.svg" alt="Map location" />
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2663.360765053499!2d24.111132696020984!3d56.9513168416462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sse!4v1710432864769!5m2!1sen!2sse"
+              width="636"
+              height="540"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
             <div class="locations-holder">
               <div class="location">
                 <h4>Medical Center 1</h4>
@@ -239,7 +300,9 @@
               <a href="https://www.facebook.com/">Facebook</a>
               <a href="https://www.linkedin.com/">Linkdedin</a>
               <a href="https://twitter.com/">Twitter</a>
-              <a href="https://www.instagram.com/williamgross.jpg/">Instagram</a>
+              <a href="https://www.instagram.com/williamgross.jpg/"
+                >Instagram</a
+              >
             </div>
             <div class="contact-us">
               Contact us
