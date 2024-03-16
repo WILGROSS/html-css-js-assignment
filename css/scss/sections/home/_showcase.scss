@@ -60,16 +60,15 @@
         }
 
         .download-btn {
-            width: 180px;
-            height: 52px;
+          width: 180px;
+          height: 52px;
           img {
-              width: 100%;
+            width: 100%;
           }
         }
       }
 
       .more {
-        margin-bottom: 20px;
         @include text-m;
 
         i {
@@ -78,6 +77,8 @@
 
         display: flex;
         align-items: center;
+        width: 165px;
+        margin-bottom: 64px;
         gap: 16px;
 
         .arrow-button {
